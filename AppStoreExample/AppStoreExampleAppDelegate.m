@@ -12,6 +12,17 @@
 
 @synthesize window;
 
+-(void)moveWindowButtons
+{
+   NSButton *closeButton = [window standardWindowButton:NSWindowCloseButton];
+   NSButton *zoomButton = [window standardWindowButton:NSWindowZoomButton];
+   NSButton *minimizeButton = [window standardWindowButton:NSWindowMiniaturizeButton];
+   
+   closeButton.frame = NSMakeRect(closeButton.frame.origin.x+5, closeButton.frame.origin.y-12, closeButton.frame.size.height, closeButton.frame.size.width);
+   zoomButton.frame = NSMakeRect(zoomButton.frame.origin.x+5, zoomButton.frame.origin.y-12, zoomButton.frame.size.height, zoomButton.frame.size.width);
+   minimizeButton.frame = NSMakeRect(minimizeButton.frame.origin.x+5, minimizeButton.frame.origin.y-12, minimizeButton.frame.size.height, minimizeButton.frame.size.width);     
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
    [frontBackButtons removeFromSuperview];
@@ -32,26 +43,14 @@
 
 - (NSSize)windowWillResize:(NSWindow *)sender toSize:(NSSize)proposedFrameSize
 {
-   NSButton *closeButton = [window standardWindowButton:NSWindowCloseButton];
-   NSButton *zoomButton = [window standardWindowButton:NSWindowZoomButton];
-   NSButton *minimizeButton = [window standardWindowButton:NSWindowMiniaturizeButton];
-   
-   closeButton.frame = NSMakeRect(closeButton.frame.origin.x+5, closeButton.frame.origin.y-12, closeButton.frame.size.height, closeButton.frame.size.width);
-   zoomButton.frame = NSMakeRect(zoomButton.frame.origin.x+5, zoomButton.frame.origin.y-12, zoomButton.frame.size.height, zoomButton.frame.size.width);
-   minimizeButton.frame = NSMakeRect(minimizeButton.frame.origin.x+5, minimizeButton.frame.origin.y-12, minimizeButton.frame.size.height, minimizeButton.frame.size.width);  
+   [self moveWindowButtons];
    
    return proposedFrameSize;
 }
 
 -(void)windowDidResize:(NSNotification *)notification
 {
-   NSButton *closeButton = [window standardWindowButton:NSWindowCloseButton];
-   NSButton *zoomButton = [window standardWindowButton:NSWindowZoomButton];
-   NSButton *minimizeButton = [window standardWindowButton:NSWindowMiniaturizeButton];
-   
-   closeButton.frame = NSMakeRect(closeButton.frame.origin.x+5, closeButton.frame.origin.y-12, closeButton.frame.size.height, closeButton.frame.size.width);
-   zoomButton.frame = NSMakeRect(zoomButton.frame.origin.x+5, zoomButton.frame.origin.y-12, zoomButton.frame.size.height, zoomButton.frame.size.width);
-   minimizeButton.frame = NSMakeRect(minimizeButton.frame.origin.x+5, minimizeButton.frame.origin.y-12, minimizeButton.frame.size.height, minimizeButton.frame.size.width);  
+   [self moveWindowButtons];
 }
 
 - (IBAction)searched:(id)sender 
@@ -64,7 +63,6 @@
 
 - (IBAction)forwardOrBackPressed:(id)sender 
 {
-   NSLog(@"%i", [sender selectedSegment]);
    if( [sender selectedSegment] == 0 )
    {
       [webView goBack];
