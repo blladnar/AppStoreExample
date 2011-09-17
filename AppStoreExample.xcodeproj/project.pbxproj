@@ -13,6 +13,7 @@
 		7017CEA71421658D0084FB1D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7017CEA51421658D0084FB1D /* Credits.rtf */; };
 		7017CEAA1421658D0084FB1D /* AppStoreExampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7017CEA91421658D0084FB1D /* AppStoreExampleAppDelegate.m */; };
 		7017CEAD1421658E0084FB1D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7017CEAB1421658E0084FB1D /* MainMenu.xib */; };
+		7017CEB414216E630084FB1D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7017CEB314216E630084FB1D /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +22,15 @@
 		7017CE991421658D0084FB1D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		7017CE9A1421658D0084FB1D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7017CE9B1421658D0084FB1D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		7017CE9E1421658D0084FB1D /* AppStoreExample-Info.plist */ = {isa = PBXFileReference; path = "AppStoreExample-Info.plist"; sourceTree = "<group>"; };
+		7017CE9E1421658D0084FB1D /* AppStoreExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppStoreExample-Info.plist"; sourceTree = "<group>"; };
 		7017CEA01421658D0084FB1D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7017CEA21421658D0084FB1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7017CEA41421658D0084FB1D /* AppStoreExample-Prefix.pch */ = {isa = PBXFileReference; path = "AppStoreExample-Prefix.pch"; sourceTree = "<group>"; };
+		7017CEA41421658D0084FB1D /* AppStoreExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppStoreExample-Prefix.pch"; sourceTree = "<group>"; };
 		7017CEA61421658D0084FB1D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		7017CEA81421658D0084FB1D /* AppStoreExampleAppDelegate.h */ = {isa = PBXFileReference; path = AppStoreExampleAppDelegate.h; sourceTree = "<group>"; };
+		7017CEA81421658D0084FB1D /* AppStoreExampleAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppStoreExampleAppDelegate.h; sourceTree = "<group>"; };
 		7017CEA91421658D0084FB1D /* AppStoreExampleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppStoreExampleAppDelegate.m; sourceTree = "<group>"; };
 		7017CEAC1421658E0084FB1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7017CEB314216E630084FB1D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7017CEB414216E630084FB1D /* WebKit.framework in Frameworks */,
 				7017CE971421658D0084FB1D /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +49,7 @@
 		7017CE871421658D0084FB1D = {
 			isa = PBXGroup;
 			children = (
+				7017CEB314216E630084FB1D /* WebKit.framework */,
 				7017CE9C1421658D0084FB1D /* AppStoreExample */,
 				7017CE951421658D0084FB1D /* Frameworks */,
 				7017CE931421658D0084FB1D /* Products */,

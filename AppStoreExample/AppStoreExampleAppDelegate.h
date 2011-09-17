@@ -7,10 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <WebKit/WebKit.h>
 
-@interface AppStoreExampleAppDelegate : NSObject <NSApplicationDelegate> {
+@interface AppStoreExampleAppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate> {
    NSWindow *window;
+   IBOutlet NSSegmentedControl *frontBackButtons;
+   IBOutlet NSSearchField *searchBar;
+   IBOutlet WebView *webView;
 }
+- (IBAction)searched:(id)sender;
+- (IBAction)forwardOrBackPressed:(id)sender;
 
 @property (assign) IBOutlet NSWindow *window;
 
